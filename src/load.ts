@@ -2,7 +2,6 @@ import { readFileSync } from "node:fs";
 import { isAsset, type Asset } from "./asset.js"
 
 const json = readFileSync("portfolio.json", "utf-8");
-console.log(json);
 
 const data: unknown = JSON.parse(json);
 if (!Array.isArray(data)) throw new Error("Ожидался массив активов");
